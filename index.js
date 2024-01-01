@@ -169,7 +169,7 @@ class Pdrive {
           const r0 = Object.keys(config[peer])[0]
           const relativePath = path.relative(path.resolve(this.home, "drives"), config[peer][r0])
           console.log({ relativePath, r0 })
-          driveName = relativePath.split("/")[0]
+          driveName = relativePath.split(path.sep)[0]
           break;
         }
       }
